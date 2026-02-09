@@ -1,0 +1,7 @@
+{
+  "name": "Expressive Camp",
+  "description": "Premium AI Communication Coach",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
