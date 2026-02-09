@@ -9,7 +9,7 @@ import { DiagnosisResult, TrainingFeedback } from "../types";
  */
 
 // Initializing the Google GenAI client using the environment variable API_KEY.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: "sk-FUkJCWag8VyHoibpNjGeZ0T1iyqPJpyELpkE9anbUVzKazWq" });
 
 export const getDiagnosisAnalysis = async (answers: string[]): Promise<DiagnosisResult> => {
   // Use gemini-3-pro-preview for advanced reasoning and multi-step tasks.
