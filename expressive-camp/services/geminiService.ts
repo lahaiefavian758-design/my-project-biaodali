@@ -11,7 +11,7 @@ import { DiagnosisResult, TrainingFeedback } from "../types";
 // Initializing the Google GenAI client using the environment variable API_KEY.
 const ai = new GoogleGenAI({ 
   apiKey: "sk-FUkJCWag8VyHoibpNjGeZ0T1iyqPJpyELpkE9anbUVzKazWq", 
-  baseUrl: "https://api.zscc.in/v1" });
+  baseUrl: "https://api.zscc.in" });
 export const getDiagnosisAnalysis = async (answers: string[]): Promise<DiagnosisResult> => {
   // Use gemini-3-pro-preview for advanced reasoning and multi-step tasks.
   const response = await ai.models.generateContent({
@@ -69,7 +69,7 @@ export const getTrainingFeedback = async (
 ): Promise<TrainingFeedback> => {
   // Use gemini-3-pro-preview for high-quality feedback and structured output.
   const response = await ai.models.generateContent({
-    model: "gemini-3-pro-preview",
+    model: "gemini-3-flash-preview",
     contents: `
     分析以下职场沟通练习：
     场景: ${scenarioName}
